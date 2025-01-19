@@ -6,7 +6,7 @@
       ansible.builtin.pip:
         name: PyMySQL
         executable: pip3.9
-        
+
     - name: Install mysql server package
       ansible.builtin.package:
         name: mysql-server
@@ -23,6 +23,7 @@
         login_user: root
         login_password: ExpenseApp@1
         login_host: mysql.vdaws.xyz
+        ignore_errors:  true
       register: mysql_info
 
     - name: print mysql information
