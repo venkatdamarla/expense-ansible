@@ -22,9 +22,9 @@
       community.mysql.mysql_info:
         login_user: root
         login_password: ExpenseApp@1
-        login_host: mysql.vdaws.xyz
-        ignore_errors:  true
+        login_host: mysql.vdaws.xyz        
       register: mysql_info
+      ignore_errors:  true
 
     - name: print mysql information
       ansible.builtin.debug:
